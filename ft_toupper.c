@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 19:24:53 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/21 19:26:23 by masnus           ###   ########.fr       */
+/*   Created: 2024/10/21 21:26:00 by masnus            #+#    #+#             */
+/*   Updated: 2024/10/21 21:35:41 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(char ch)
+char	*toupper(char *str)
 {
-	if (ch >= '0' && ch <= '9')
-		return (1);
-	return (0);
+	int	i;
+
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] = str[i] + 32;
+		}
+		i++;
+	}
+	return (str);
 }

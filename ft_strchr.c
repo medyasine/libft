@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 19:27:34 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/21 19:28:40 by masnus           ###   ########.fr       */
+/*   Created: 2024/10/21 22:23:35 by masnus            #+#    #+#             */
+/*   Updated: 2024/10/21 22:28:56 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalnum(char c)
+#include "libft.h"
+
+char	*strchr(const char *s, int c)
 {
-	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') 
-		|| (ch >= '0' && ch <= '9'))
-		return (1);
-	return (0);
+	while (*s)
+	{
+		if (*s == (char)c)
+		{
+			return (s);
+		}
+	}
+	if (c == '\0')
+		return (s);
+	return (NULL);
 }
