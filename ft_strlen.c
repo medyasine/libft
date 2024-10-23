@@ -6,11 +6,13 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:54:40 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/21 19:58:13 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/23 21:42:01 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+int	ft_strlen(const char *str)
 {
 	int	i;
 
