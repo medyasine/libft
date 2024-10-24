@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:05:49 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/24 22:11:42 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:23:54 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
     int i;
     int sign;
-    long result;
+    int result;
 
     i = 0;
     sign = 1;
