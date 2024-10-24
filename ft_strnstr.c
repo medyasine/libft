@@ -1,30 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 22:38:45 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/24 21:59:28 by masnus           ###   ########.fr       */
+/*   Created: 2024/10/24 20:19:28 by masnus            #+#    #+#             */
+/*   Updated: 2024/10/24 21:56:41 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c) 
+char	*ft_strnstr(const char *src, const char *to_find, size_t len)
 {
-	size_t	i;
-
-	
-	i = ft_strlen(s);
-	if (c == '\0')
-		return ((char *)s + i); 
-	while (i >= 0)
-	{
-		if (s[i] == (char)c)
-			return ((char *)s +i); 
-		i--;
-	}
-	return (0);
+    
 }

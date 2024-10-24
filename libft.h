@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/24 21:15:24 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/24 21:57:59 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_isascii(unsigned char ch);
 int		ft_isdigit(unsigned char ch);
 int		ft_isprint(unsigned char ch);
 void	*ft_memset(void *b, int c, int len);
-int		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 char	*ft_toupper(char *str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c) ;
