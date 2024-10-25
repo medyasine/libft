@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 22:38:45 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/24 21:59:28 by masnus           ###   ########.fr       */
+/*   Created: 2024/10/24 20:19:28 by masnus            #+#    #+#             */
+/*   Updated: 2024/10/24 22:23:43 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c) 
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
-	
-	i = ft_strlen(s);
-	if (c == '\0')
-		return ((char *)s + i); 
-	while (i >= 0)
+	i = 0;
+	if (!str && !len)
+		return (0);
+	if (to_find[0] == '\0' || to_find == str)
+		return ((char *)str);
+	while (str[i] != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)s +i); 
-		i--;
+		j = 0;
+		while (str[i + j] == to_find[j] && (i + j) < len)
+		{
+			if (str[i + j] == '\0' && to_find[j] == '\0')
+				return ((char *)&str[i]);
+			j++;
+		}
+		if (to_find[j] == '\0')
+			return ((char *)(str + i));
+		i++;
 	}
 	return (0);
 }

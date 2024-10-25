@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 22:38:45 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/24 21:59:28 by masnus           ###   ########.fr       */
+/*   Created: 2024/10/24 21:47:49 by masnus            #+#    #+#             */
+/*   Updated: 2024/10/24 21:58:48 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stdlib.h"
 
-char	*ft_strrchr(const char *s, int c) 
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
+    int i;
+    size_t s1len;
+    char *ptr;
 
-	
-	i = ft_strlen(s);
-	if (c == '\0')
-		return ((char *)s + i); 
-	while (i >= 0)
-	{
-		if (s[i] == (char)c)
-			return ((char *)s +i); 
-		i--;
-	}
-	return (0);
+    i = 0;
+    s1len = ft_strlen(s1);
+    ptr = malloc(s1len + 1);
+    while(s1[i])
+        ptr[i] = s1[i++];
+    ptr[i] = '\0';
+    return ptr
 }
