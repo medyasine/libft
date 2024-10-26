@@ -6,11 +6,11 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:20:17 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/21 19:46:25 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/26 15:31:50 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(unsigned char ch)
+int	ft_isalpha(int ch)
 {
 	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
 		return (1);
