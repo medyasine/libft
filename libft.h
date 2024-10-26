@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/25 18:52:55 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/26 10:19:47 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 #include <stdlib.h>
+#include <limits.h>
+
 
 void	ft_bzero(void *s, int n);
 int		ft_isalnum(unsigned char c);
@@ -41,6 +43,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+int		ft_atoi(const char *str);
 
 
 

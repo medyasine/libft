@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:52:10 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/25 21:43:04 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/26 09:31:02 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,10 @@ static char	**free_strs(char **lst)
 	free(lst);
 	return (NULL);
 }
-static char **ft_extra_split(char const *s, char c, char **strs)
+static char **ft_extra_split(char const *s, char c, char **strs, size_t j)
 {
 	int start;
 	int i;
-	int j;
-
 
 	i = 0;
 	start=0;
@@ -63,7 +61,7 @@ static char **ft_extra_split(char const *s, char c, char **strs)
 			i++;
 		if(i > start)
 		{
-			strs[j] = ft_substr(s, start, (start-i)+1);
+			strs[j] = ft_substr(s, start, i - start - 1);
 			if(!strs[j])
 				return free_strs(strs);
 			j++;
@@ -76,8 +74,9 @@ char **ft_split(char const *s, char c)
 {
 	char **strs;
 
-	strs = malloc(word_count((char *)s, c) * sizeof(char *));
+	strs = malloc((word_count((char *)s, c) + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
-	return (ft_extra_split(s, c, strs));
+	return (ft_extra_split(s, c, strs, 0));
 }
+
