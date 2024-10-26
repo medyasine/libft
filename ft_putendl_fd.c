@@ -6,22 +6,14 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:48:06 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 14:01:47 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:42:09 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void ft_putendl_fd(char *s, int fd)
 {
-	size_t i;
-
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-	write(fd, "\n", 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
