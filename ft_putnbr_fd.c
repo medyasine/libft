@@ -6,23 +6,23 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 16:40:04 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 17:03:39 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/26 18:17:56 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long i;
 
 	i = n;
-	if(i < 0)
+	if (i < 0)
 	{
 		ft_putchar_fd('-', fd);
 		i = -i;
 	}
-	if(i / 10)
+	if (i / 10)
 		ft_putnbr_fd(i / 10, fd);
-	ft_putchar_fd(i % 10,  fd);
+	ft_putchar_fd(i % 10, fd);
 }

@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 16:39:24 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/26 17:29:12 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <limits.h>
 
 
@@ -51,7 +52,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 
-
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+} t_list;
 
 
 

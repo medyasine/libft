@@ -6,14 +6,13 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:32:04 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 16:59:06 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/26 18:17:42 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

@@ -6,18 +6,18 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:37:26 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/25 16:48:16 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/26 18:15:35 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void *ptr;
 
 	ptr = malloc(count * size);
-	if(!ptr)
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * size);
 	return (ptr);
