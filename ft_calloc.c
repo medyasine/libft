@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 21:47:49 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/25 17:32:34 by masnus           ###   ########.fr       */
+/*   Created: 2024/10/25 16:37:26 by masnus            #+#    #+#             */
+/*   Updated: 2024/10/25 16:48:16 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void *ft_calloc(size_t count, size_t size)
 {
-    int i;
-    size_t s1len;
-    char *ptr;
+	void *ptr;
 
-    i = 0;
-    s1len = ft_strlen(s1);
-    ptr = malloc(s1len + 1);
-    while(s1[i])
-    {
-        ptr[i] = s1[i];
-        i++;
-    }
-        
-    ptr[i] = '\0';
-    return ptr;
+	ptr = malloc(count * size);
+	if(!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 21:47:49 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/25 17:32:34 by masnus           ###   ########.fr       */
+/*   Created: 2024/10/25 16:55:22 by masnus            #+#    #+#             */
+/*   Updated: 2024/10/25 17:42:39 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    int i;
-    size_t s1len;
-    char *ptr;
+	char *subString;
+	size_t len_src;
 
-    i = 0;
-    s1len = ft_strlen(s1);
-    ptr = malloc(s1len + 1);
-    while(s1[i])
-    {
-        ptr[i] = s1[i];
-        i++;
-    }
-        
-    ptr[i] = '\0';
-    return ptr;
-}
+	if(!s)
+		return (NULL);
+	len_src = ft_strlen(s);
+	if (start >= len_src)
+		return ft_strdup("");
+	if (len > len_src - start)
+		len = len_src - start;
+	subString = malloc(len+1);
+	if (!subString)
+		return (NULL);
+	ft_strlcpy(subString, (char *)&s[start], len + 1);
+	return (subString);
+}	

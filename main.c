@@ -1,63 +1,34 @@
-#include "libft.h"
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
+#include "libft.h"
 
-
-void test_ft_memcpy(void *dest, const void *src, size_t n)
-{
-    // Save original destination for comparison
-    unsigned char *original_dest = malloc(n);
-    if (!original_dest)
-    {
-        perror("Failed to allocate memory for comparison");
-        return;
+void run_test(const char *s1, const char *set, const char *expected) {
+    char *result = ft_strtrim(s1, set);
+    if (result) {
+        if (strcmp(result, expected) == 0) {
+            printf("Test passed: ft_strtrim(\"%s\", \"%s\") = \"%s\"\n", s1, set, result);
+        } else {
+            printf("Test failed: ft_strtrim(\"%s\", \"%s\") = \"%s\", expected \"%s\"\n", s1, set, result, expected);
+        }
+        free(result); // Free the allocated memory for the result
+    } else {
+        printf("Test failed: ft_strtrim(\"%s\", \"%s\") returned NULL\n", s1, set);
     }
-    
-    // Copy source to original destination using standard memcpy
-    memcpy(original_dest, src, n);
-    
-    // Copy source to destination using ft_memcpy
-    ft_memcpy(dest, src, n);
-
-    // Compare the two memory blocks
-    if (memcmp(dest, original_dest, n) == 0)
-    {
-        printf("Test passed for memcpy with %zu bytes.\n", n);
-    }
-    else
-    {
-        printf("Test failed for memcpy with %zu bytes.\n", n);
-    }
-
-    // Free the allocated memory
-    free(original_dest);
 }
 
-int main(void)
-{
-    // Allocate memory for test
-    size_t size = 10;
-    unsigned char *src = (unsigned char *)"HelloWorld"; // Source data
-    unsigned char *dest1 = malloc(size);  // Destination for ft_memcpy
-    unsigned char *dest2 = malloc(size);  // Destination for standard memcpy
-
-    if (!dest1 || !dest2)
-    {
-        perror("Failed to allocate memory for destination");
-        return 1;
-    }
-
+int main() {
     // Test cases
-    test_ft_memcpy(dest1, src, 10);     // Full string
-    test_ft_memcpy(dest1, src, 5);      // Partial string
-    test_ft_memcpy(dest1, src, 0);      // Zero bytes
-    test_ft_memcpy(dest1, src, 1);      // Single byte
-    test_ft_memcpy(dest1, src, 15);     // More bytes than available
-
-    // Clean up
-    free(dest1);
-    free(dest2);
+    run_test("   Hello, World!   ", " ", "Hello, World!");          // Trimming spaces
+    run_test("!!!Hello!!!", "!", "Hello");                          // Trimming exclamation marks
+    run_test("abcabc", "abc", "");                                  // Trimming all characters
+    run_test("", "abc", "");                                        // Empty input string
+    run_test("   ", " ", "");                                       // Input with only spaces
+    run_test("Hello", " ", "Hello");                                // No trimming needed
+    run_test("   Hello World   ", " HW", "ello World");            // Trim multiple characters
+    run_test("12345", "6789", "12345");                             // No characters to trim
+    run_test("abcdeabc", "abc", "d");                               // Trim leading and trailing 'abc'
+    run_test("   ", " ", "");                                       // Full string trim
+    run_test("   Hello World!   ", " !", "Hello World");           // Trim spaces and exclamation marks
 
     return 0;
 }
