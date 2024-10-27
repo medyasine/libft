@@ -6,13 +6,13 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:26:00 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 17:19:06 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 19:01:38 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);
