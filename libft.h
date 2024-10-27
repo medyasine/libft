@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 10:04:46 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 11:27:54 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int		ft_isdigit(unsigned char ch);
 int		ft_isprint(unsigned char ch);
 void	*ft_memset(void *b, int c, int len);
 size_t	ft_strlen(const char *str);
-char	*ft_toupper(char *str);
+char	ft_toupper(int c);
+char	ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c) ;
 int     ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -62,6 +63,7 @@ int	ft_lstsize(t_list *lst);
 void ft_lstclear(t_list **lst, void (*del)(void*));
 void ft_lstadd_back(t_list **lst, t_list *new);
 void ft_lstdelone(t_list *lst, void (*del)(void*));
+void ft_lstiter(t_list *lst, void (*f)(void *));
 
 
 
