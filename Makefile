@@ -2,7 +2,7 @@ SRC = ft_atoi.c ft_isascii.c ft_memcpy.c ft_strlcat.c ft_strrchr.c ft_bzero.c ft
 
 OBJ = $(SRC:.c=.o)
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
 all : $(NAME)
@@ -13,11 +13,10 @@ $(NAME) : $(OBJ)
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean:
-	rm -f $(OBJ)
+clean :
+	rm -f $(OBJ) $(BOBJ)
 
 fclean : clean
 	rm -f $(NAME)
-
 
 re : fclean all

@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:24:53 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/21 19:46:19 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 21:11:22 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(unsigned char ch)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
-	if (ch >= '0' && ch <= '9')
+	if ((c >= '0' && c <= '9'))
 		return (1);
 	return (0);
 }

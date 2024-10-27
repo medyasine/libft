@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:23:35 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/23 22:02:51 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 21:13:07 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
+	while (*s != (char)c)
 	{
-		if (s[i] == (char)c)
-		{
-			return ((char *)s + i);
-		}
-		i++;
+		if (!*s)
+			return (0);
+		s++;
 	}
-	if (c == '\0')
-		return ((char *)s + i);
-	return (0);
+	return ((char *)s);
 }

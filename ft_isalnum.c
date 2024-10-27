@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:27:34 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 18:15:54 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 21:28:02 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(unsigned char c)
+int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0'
 			&& c <= '9'))

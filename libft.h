@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 19:29:54 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 21:35:54 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,24 @@ int					ft_isalpha(int ch);
 int					ft_isascii(int ch);
 int					ft_isdigit(int ch);
 int					ft_isprint(int ch);
+void				*ft_memset(void *b, int c, size_t len);
+size_t				ft_strlen(const char *str);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-void				*ft_memset(void *b, int c, int len);
-size_t				ft_strlen(const char *str);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
-void				*ft_memcpy(void *dest, const void *src, size_t n);
+void				*ft_memcpy(void *s1, const void *s2, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
-char				*ft_strnstr(const char *str, const char *to_find,
-						size_t len);
+char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strdup(const char *s1);
 size_t				ft_strlcpy(char *dst,const char *src, size_t dstsize);
 char				*ft_strjoin(char const *s1, char const *s2);
-size_t				ft_strlcat(char *dst, const char *src, size_t dsize);
+size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);

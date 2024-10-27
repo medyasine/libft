@@ -3,29 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:19:28 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 15:01:23 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 21:02:26 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	while (str[i] && i < len)
+	if (!*s2)
+		return ((char *) s1);
+	while (s1[i] && i < n)
 	{
 		j = 0;
-		while (to_find[j] == str[i + j] && (i + j) < len)
+		while (s1[i + j] == s2[j] && i + j < n)
+		{
 			j++;
-		if (to_find[j] == '\0')
-			return ((char *)&str[i]);
+			if (s2[j] == '\0')
+				return ((char *)s1 + i);
+		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
