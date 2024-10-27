@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 17:20:29 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 18:43:00 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,15 @@ typedef struct s_list
 }					t_list;
 
 void				ft_bzero(void *s, int n);
-int					ft_isalnum(unsigned char c);
-int					ft_isalpha(unsigned char ch);
-int					ft_isalpha(unsigned char ch);
-int					ft_isascii(unsigned char ch);
-int					ft_isdigit(unsigned char ch);
-int					ft_isprint(unsigned char ch);
+int					ft_isalnum(int c);
+int					ft_isalpha(int ch);
+int					ft_isascii(int ch);
+int					ft_isdigit(int ch);
+int					ft_isprint(int ch);
+int					ft_toupper(int c);
+int					ft_tolower(int c);
 void				*ft_memset(void *b, int c, int len);
 size_t				ft_strlen(const char *str);
-char				ft_toupper(int c);
-char				ft_tolower(int c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
