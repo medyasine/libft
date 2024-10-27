@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*    ft_lstadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 13:32:04 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 18:24:51 by masnus           ###   ########.fr       */
+/*   Created: 2024/10/27 09:15:56 by masnus            #+#    #+#             */
+/*   Updated: 2024/10/27 09:21:29 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	t_list *last;
+
+	if(!new)
+		return ;
+	if(lst == NULL)
+	{
+		*lst = new;
+		return;
+	}
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
