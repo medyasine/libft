@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 18:30:05 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 11:28:27 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 14:56:51 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
-	if(!lst)
+	if (!lst)
 		return (0);
 	i = 0;
 	while (lst)
@@ -24,7 +24,5 @@ int	ft_lstsize(t_list *lst)
 		lst = lst->next;
 		i++;
 	}
-		
 	return (i);
 }
-

@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:29:41 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 18:17:26 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 14:58:49 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *ss1;
-	unsigned char *ss2;
-	size_t i;
+	unsigned char	*ss1;
+	unsigned char	*ss2;
+	size_t			i;
 
 	ss1 = (unsigned char *)s1;
 	ss2 = (unsigned char *)s2;

@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:42:48 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 18:18:18 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 15:00:28 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t len_s1;
-	size_t len_s2;
-	char *ptr;
+	size_t	len_s1;
+	size_t	len_s2;
+	char	*ptr;
 
 	if (!s1 || !s2)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:04:58 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 18:18:35 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 15:00:49 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *result;
-	size_t len;
-	size_t i;
+	char	*result;
+	size_t	len;
+	size_t	i;
 
 	if (!s || !f)
 		return (NULL);

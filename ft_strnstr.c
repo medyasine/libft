@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:19:28 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 18:18:49 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 15:01:23 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-
 	while (str[i] && i < len)
 	{
 		j = 0;

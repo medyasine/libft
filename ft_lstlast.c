@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 09:09:07 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 11:02:51 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 14:56:28 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if(!lst)
+	if (!lst)
 		return (NULL);
 	while (lst->next)
 	{
