@@ -6,20 +6,24 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:28:02 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/25 17:34:01 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 17:11:34 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcpy(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	src_len;
 
 	i = 0;
 	src_len = ft_strlen(src);
-	while (src[i] && i <= dstsize - 1)
+	if(!dst || !src)
+		return (0);
+	if (dstsize == 0)
+        return (src_len);
+	while (src[i] && i < dstsize - 1)
 	{
 		dst[i] = src[i];
 		i++;
@@ -28,3 +32,13 @@ int	ft_strlcpy(char *dst, char *src, size_t dstsize)
 		dst[i] = '\0';
 	return (src_len);
 }
+// int main()
+// {
+// 	char dest1[100];
+// 	char dest2[100];
+// 	ft_strlcpy(dest1, "lorem ipsum dolor sit amet", 0);
+// 	strlcpy(dest2, "lorem ipsum dolor sit amet", 0);
+// 	printf("my strcpy ==> %s\n", dest1);
+// 	printf("original strcpy ==> %s", dest2);
+
+// }

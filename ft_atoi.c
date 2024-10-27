@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:05:49 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 14:53:36 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/27 16:41:58 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int	ft_atoi(const char *str)
 			sign *= -1;
 		i++;
 	}
-	while (ft_isdigit(str[i]))
+	while (ft_isdigit(str[i]) && str[i])
 	{
-		result *= 10 + (str[i] - '0');
+		result = (result * 10) + (str[i] - '0');
 		if (result > 9223372036854775807 && sign == 1)
 			return (-1);
 		if (result > 9223372036854775807 && sign == -1)
@@ -40,3 +40,9 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+// int main()
+// {
+// 	printf("%d\n", ft_atoi("546:5"));
+// 	printf("%d", atoi("546:5"));
+// }
