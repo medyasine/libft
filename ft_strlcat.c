@@ -6,35 +6,31 @@
 /*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:07:37 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 21:34:29 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/28 12:14:47 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 {
-	size_t	dstlen;
-	size_t	srclen;
-	size_t	i;
+	size_t	dest_len;
+	size_t	src_len;
 	size_t	j;
 
-	dstlen = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	j = ft_strlen(dst);
-	if (size <= dstlen)
-		return (size + srclen);
-	i = 0;
-	while (src[i] && i < size - dstlen - 1)
+	src_len = ft_strlen(src);
+	dest_len = ft_strlen(dst);
+	if (dsize <= dest_len)
+		return (src_len + dsize);
+	j = 0;
+	while (src[j] && (dest_len + j) < (dsize - 1))
 	{
-		dst[j] = src[i];
-		i++;
+		dst[dest_len + j] = src[j];
 		j++;
 	}
-	dst[j] = '\0';
-	return (dstlen + srclen);
+	dst[dest_len + j] = '\0';
+	return (dest_len + src_len);
 }
-	
 
 // int main()
 // {
@@ -44,7 +40,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 // 	strlcat(dest2, "lorem ipsum dolor sit amet", 5);
 // 	memset(dest1, 'r', 15);
 // 	ft_strlcat(dest1, "lorem ipsum dolor sit amet", 5);
-	
 // 	printf("my strcat ==> |%s|\n", dest1);
 // 	printf("original strcat ==> |%s|", dest2);
 // }

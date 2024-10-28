@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:28:02 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 17:11:34 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/28 12:06:46 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	src_len = ft_strlen(src);
-	if(!dst || !src)
+	if (!dst || !src)
 		return (0);
 	if (dstsize == 0)
-        return (src_len);
+		return (src_len);
 	while (src[i] && i < dstsize - 1)
 	{
 		dst[i] = src[i];

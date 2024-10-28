@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 21:35:54 by masnus           ###   ########.fr       */
+/*   Updated: 2024/10/28 12:15:28 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strdup(const char *s1);
-size_t				ft_strlcpy(char *dst,const char *src, size_t dstsize);
+size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char				*ft_strjoin(char const *s1, char const *s2);
-size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlcat(char *dst, const char *src, size_t dsize);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
@@ -58,6 +58,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
