@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 11:57:23 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/01 19:21:49 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/02 15:20:26 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,22 +52,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 //     }
 //     return (new);
 // }
-
 // void	ll(void)
 // {
 // 	system("leaks a.out");
 // }
-
 // int main(void)
 // {
 //     t_list *head = ft_lstnew(ft_strdup("amine"));
 //     t_list *node1 = ft_lstnew(ft_strdup("yassine"));
 //     t_list *node2 = ft_lstnew(ft_strdup("moad"));
 //     t_list *new;
-
 //     head->next = node1;
 //     node1->next = node2;
-
 //     atexit(ll);
 //     new = ft_lstmap(head, &to_upper, &free);
 //     ft_lstclear(&head, &free);

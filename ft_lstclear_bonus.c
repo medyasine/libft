@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 09:33:50 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/01 17:46:02 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/02 11:47:04 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list	*tmp;
+	t_list	*tmp;
 
-    if (!lst || !del)
-        return ;
-    while (*lst)
-    {
-        tmp = *lst;
-        *lst = tmp->next;
-        ft_lstdelone(tmp, del);
-    }
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		tmp = *lst;
+		*lst = tmp->next;
+		ft_lstdelone(tmp, del);
+	}
 }
-
 
 // void del(void *ptr)
 // {
@@ -35,14 +34,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 // {
 // 	system("leaks a.out");
 // }
-
 // int main()
 // {
 // 	t_list *head;
 // 	t_list *node1;
 // 	t_list *node2;
 // 	t_list *node3;
-
 // 	head = ft_lstnew(ft_strdup("yassine"));
 // 	node1 = ft_lstnew(ft_strdup("amine"));
 // 	node2 = ft_lstnew(ft_strdup("mouad"));

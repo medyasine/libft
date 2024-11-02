@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:52:10 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 21:35:00 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/02 17:23:32 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(const char *s, char sep)
+static int	count_words(const char *s, char sep)
 {
 	int	count;
 	int	i;
@@ -47,7 +47,7 @@ static char	**free_lst(char **lst)
 	return (NULL);
 }
 
-size_t	next_sep(const char *s1, char sep)
+static size_t	next_sep(const char *s1, char sep)
 {
 	size_t	len;
 

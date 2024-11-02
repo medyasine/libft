@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 11:02:41 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 14:56:12 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/02 19:04:20 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!f)
+	if (!f || !lst)
 		return ;
 	while (lst)
 	{
@@ -26,7 +26,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 // void	up(void *ptr)
 // {
 // 	char	*p;
-
 // 	p = (char *)ptr;
 // 	while (*p)
 // 	{
@@ -34,7 +33,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 // 		p++;
 // 	}
 // }
-
 // void	printf_linkedlist(t_list *lst)
 // {
 // 	if (!lst)

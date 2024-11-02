@@ -6,12 +6,11 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:02:14 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/26 18:14:22 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/02 18:56:56 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	num_len(int n)
 {

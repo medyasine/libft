@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:05:49 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/01 16:51:10 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/02 12:50:42 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 			sign *= -1;
 		i++;
 	}
-	while (ft_isdigit(str[i]) && str[i])
+	while (str[i] && ft_isdigit(str[i]))
 	{
 		result = (result * 10) + (str[i] - '0');
 		if (result > 9223372036854775807 && sign == 1)
