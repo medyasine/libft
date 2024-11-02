@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:05:49 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 21:23:13 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/01 16:51:10 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ int	ft_atoi(const char *str)
 // int main()
 // {
 // 	printf("%d\n", ft_atoi("546:5"));
-// 	printf("%d", atoi("546:5"));
+// 	printf("%d", atoi(NULL));
 // }

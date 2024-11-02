@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 11:57:23 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 14:56:32 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/01 19:21:49 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,27 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new;
-	t_list	*node;
+	t_list	*head;
+	void	*ptr;	
+	t_list	*new_node;
 
 	if (!lst || !f || !del)
 		return (NULL);
-	new = NULL;
+	head = NULL;
 	while (lst)
 	{
-		node = ft_lstnew(f(lst->content));
-		if (!node)
+		ptr = f(lst->content);
+		new_node = ft_lstnew(ptr);
+		if (!new_node)
 		{
-			ft_lstclear(&new, del);
+			del(ptr);
+			ft_lstclear(&head, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new, node);
+		ft_lstadd_back(&head, new_node);
 		lst = lst->next;
 	}
-	return (new);
+	return (head);
 }
 
 // void *to_upper(void *str)
