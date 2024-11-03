@@ -6,13 +6,13 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:18:05 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/25 19:50:38 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/03 12:11:07 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_check_set(char const c, char const *set)
+static int	has_char(char const c, char const *set)
 {
 	int	i;
 
@@ -35,7 +35,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (s1)
 	{
-		if (ft_check_set(((char)*s1), set) == 1)
+		if (has_char(((char)*s1), set) == 1)
 			s1++;
 		else
 			break ;
@@ -43,7 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size = ft_strlen(s1);
 	while (size != 0)
 	{
-		if (ft_check_set(s1[size - 1], set) == 1)
+		if (has_char(s1[size - 1], set) == 1)
 			size--;
 		else
 			break ;
@@ -51,6 +51,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = (char *)malloc(size + 1);
 	if (!ptr)
 		return (NULL);
-	ft_strlcpy(ptr, (char *)s1, size + 1);
+	ft_strlcpy(ptr, s1, size + 1);
 	return (ptr);
 }

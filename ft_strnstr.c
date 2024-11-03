@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:19:28 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 21:02:26 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/03 13:24:35 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 
 	i = 0;
 	if (!*s2)
-		return ((char *) s1);
+		return ((char *) s1); 
 	while (s1[i] && i < n)
 	{
 		j = 0;
