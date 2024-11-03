@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:52:10 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/02 17:23:32 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/03 19:10:33 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static char	**free_lst(char **lst)
 	return (NULL);
 }
 
-static size_t	next_sep(const char *s1, char sep)
+static size_t	word_len_by_sep(const char *s1, char sep)
 {
 	size_t	len;
 
@@ -60,7 +60,7 @@ static size_t	next_sep(const char *s1, char sep)
 	return (len);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**lst;
 	size_t	len_word;
@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	lst = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
+	lst = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!lst)
 		return (NULL);
 	lst_index = 0;
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		else
 		{
-			len_word = next_sep(s, c);
+			len_word = word_len_by_sep(s, c);
 			lst[lst_index] = ft_substr(s, 0, len_word);
 			if (!lst[lst_index++])
 				return (free_lst(lst));
@@ -93,7 +93,6 @@ char	**ft_split(char const *s, char c)
 // {
 // 	char	*string;
 // 	char	**s;
-
 // 	string = "      split       this for   me  !       ";
 // 	s = ft_split(string, ' ');
 // 	if (s == NULL)

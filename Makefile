@@ -22,7 +22,7 @@ clean :
 fclean : clean
 	rm -f $(NAME)
 
-bonus : $(OBJ) $(BOBJ)
-	ar rc $(NAME) $(OBJ) $(BOBJ)
+bonus : $(BOBJ)
+	ar rc $(NAME) $(BOBJ)
 
 re : fclean all

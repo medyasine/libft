@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/03 12:08:40 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/03 19:07:52 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,16 @@ void				*ft_memcpy(void *s1, const void *s2, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 void				*ft_calloc(size_t count, size_t size);
-char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				*ft_substr(const char *s, unsigned int start, size_t len);
 char				*ft_strdup(const char *s1);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
-char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin(const char *s1, const char *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t dsize);
-char				*ft_strtrim(char const *s1, char const *set);
-char				**ft_split(char const *s, char c);
+char				*ft_strtrim(const char *s1, const char *set);
+char				**ft_split(const char *s, char c);
 char				*ft_itoa(int n);
 int					ft_atoi(const char *str);
-char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void				ft_putchar_fd(char c, int fd);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_putstr_fd(char *s, int fd);

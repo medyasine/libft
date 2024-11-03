@@ -6,13 +6,13 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:18:05 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/03 12:11:07 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/03 19:12:04 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	has_char(char const c, char const *set)
+static int	has_char(char c, char *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ static int	has_char(char const c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	size;
 	char	*ptr;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:28:02 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/28 12:06:46 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/03 18:13:52 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	strlcpy(dest2, "lorem ipsum dolor sit amet", 0);
 // 	printf("my strcpy ==> %s\n", dest1);
 // 	printf("original strcpy ==> %s", dest2);
-
 // }
