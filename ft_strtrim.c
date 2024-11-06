@@ -6,13 +6,13 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:18:05 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/03 19:12:04 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/03 19:43:47 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	has_char(char c, char *set)
+static int	has_char(char c, const char *set)
 {
 	int	i;
 

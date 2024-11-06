@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:07:37 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/28 12:14:47 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/06 09:40:52 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	size_t	src_len;
 	size_t	j;
 
+	if (dsize == 0)
+		return (ft_strlen(src));
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dst);
 	if (dsize <= dest_len)
@@ -42,4 +44,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 // 	ft_strlcat(dest1, "lorem ipsum dolor sit amet", 5);
 // 	printf("my strcat ==> |%s|\n", dest1);
 // 	printf("original strcat ==> |%s|", dest2);
+// }
+
+// int main(void)
+// {
+// 	// printf("%lu", strlcat(NULL, "NULL", 0));
+// 	printf("%zu", ft_strlcat(NULL, "NULL", 0));
 // }

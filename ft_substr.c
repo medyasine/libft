@@ -6,13 +6,13 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:55:22 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/03 19:07:33 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/03 19:44:20 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char  *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*sub_string;
 	size_t	len_src;
