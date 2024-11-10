@@ -6,52 +6,52 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:02:14 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/02 18:56:56 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/09 17:33:03 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	num_len(int n)
+static size_t	ft_numlen(int num)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
-	if (n <= 0)
+	if (num <= 0)
 		len++;
-	while (n)
+	while (num)
 	{
+		num /= 10;
 		len++;
-		n /= 10;
 	}
 	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	size_t	n_len;
-	char	*ptr;
+	size_t	num_len;
+	char	*str;
 	long	num;
 
+	num_len = ft_numlen(n);
 	num = n;
-	n_len = num_len(n);
-	ptr = malloc(n_len + 1);
-	if (!ptr)
+	str = malloc(num_len + 1);
+	if (!str)
 		return (NULL);
-	ptr[n_len] = '\0';
+	str[num_len] = '\0';
 	if (num < 0)
 	{
-		ptr[0] = '-';
 		num *= -1;
+		str[0] = '-';
 	}
 	if (num == 0)
-		ptr[0] = '0';
-	while (num > 0)
+		str[0] = '0';
+	while (num)
 	{
-		ptr[--n_len] = num % 10 + '0';
+		str[--num_len] = (num % 10) + '0';
 		num /= 10;
 	}
-	return (ptr);
+	return (str);
 }
 
 // int	main(void)

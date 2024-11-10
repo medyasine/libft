@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:52:10 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/03 19:10:33 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/09 17:49:20 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	**ft_split(const char *s, char c)
 
 	if (!s)
 		return (NULL);
-	lst = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	lst = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!lst)
 		return (NULL);
 	lst_index = 0;

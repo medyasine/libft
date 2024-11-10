@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 16:40:04 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/28 12:11:21 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/09 17:48:19 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		i = -i;
 	}
-	if (i / 10)
+	if (i >= 10)
 		ft_putnbr_fd(i / 10, fd);
 	ft_putchar_fd(i % 10 + '0', fd);
 }

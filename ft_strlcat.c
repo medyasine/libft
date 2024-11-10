@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:07:37 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/06 09:40:52 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/06 13:10:37 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 
 // int main()
 // {
-// 	char *dest1 = malloc(16);  // Allocate 15 + 1 for null terminator
-// 	char *dest2 = malloc(16);  // Allocate 15 + 1 for null terminator
+// 	char *dest1 = malloc(16);
+// 	char *dest2 = malloc(16);
 // 	memset(dest2, 'r', 15);
 // 	strlcat(dest2, "lorem ipsum dolor sit amet", 5);
 // 	memset(dest1, 'r', 15);
 // 	ft_strlcat(dest1, "lorem ipsum dolor sit amet", 5);
 // 	printf("my strcat ==> |%s|\n", dest1);
 // 	printf("original strcat ==> |%s|", dest2);
-// }
-
-// int main(void)
-// {
-// 	// printf("%lu", strlcat(NULL, "NULL", 0));
-// 	printf("%zu", ft_strlcat(NULL, "NULL", 0));
 // }

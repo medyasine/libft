@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:04:58 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 21:10:07 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/09 17:28:00 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char				*ptr;
 	unsigned int		i;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
-	ptr = (char *)malloc(ft_strlen(s) + 1);
+	ptr = malloc(ft_strlen(s) + 1);
 	if (!ptr)
 		return (0);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:28:02 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/06 09:57:57 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/09 17:52:43 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	if (dstsize == 0)
 		return (src_len);
-	while (src[i] && i < dstsize - 1)
+	while (i < dstsize - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;

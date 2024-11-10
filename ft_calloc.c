@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:37:26 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/06 11:45:31 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/10 09:14:22 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if ((count * size) / size != count)
+		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
@@ -34,5 +36,5 @@ void	*ft_calloc(size_t count, size_t size)
 // 	{
 // 		printf("%c\n", str[i]);
 // 	}
-// 	return 0;
+// 	return (0);
 // }

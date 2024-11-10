@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masnus <masnus@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:29:18 by masnus            #+#    #+#             */
-/*   Updated: 2024/10/27 21:27:50 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/10 11:18:22 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int ch)
+int	ft_isascii(int c)
 {
-	if (ch >= 0 && ch <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

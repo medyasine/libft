@@ -6,7 +6,7 @@
 /*   By: masnus <masnus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 21:42:09 by masnus            #+#    #+#             */
-/*   Updated: 2024/11/06 12:38:09 by masnus           ###   ########.fr       */
+/*   Updated: 2024/11/10 10:20:30 by masnus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ typedef struct s_list
 
 void				ft_bzero(void *s, int n);
 int					ft_isalnum(int c);
-int					ft_isalpha(int ch);
-int					ft_isascii(int ch);
-int					ft_isdigit(int ch);
-int					ft_isprint(int ch);
+int					ft_isalpha(int c);
+int					ft_isascii(int c);
+int					ft_isdigit(int c);
+int					ft_isprint(int c);
 void				*ft_memset(void *b, int c, size_t len);
 size_t				ft_strlen(const char *str);
 int					ft_toupper(int c);
